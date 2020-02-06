@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
+const fs=require('fs')
 const client = new Discord.Client();
-const Token = 'Njc0MDQzMjI0MTY3Mjg0NzQ4.XjotHA.aEv0g3ElVEUk3LV-xd-5Hcr505Y'
+const Token = fs.readFileSync('token.txt').toString()
+
 client.on('ready', () => {
     console.log('bot logged in as ' + client.user.tag);
 });
@@ -20,7 +22,6 @@ client.on('message', (recievedMessage) => {
                 case 'gk3':
                     AlertChanel.send(recievedMessage.author + ' không teencode ')
                     teencode = true;
-                    console.log(channel.name + ' ' + recievedMessage.author + ' ' + string)
                     break;
             }
             if (teencode === true) break;
