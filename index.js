@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const fs=require('fs')
 const client = new Discord.Client();
-const Token = fs.readFileSync('token.txt').toString()
+const Token = 'Njc0MDQzMjI0MTY3Mjg0NzQ4.XjvPJg.CIDguWeQppShF8TMkSSWGfrOeew'
 
 client.on('ready', () => {
     console.log('bot logged in as ' + client.user.tag);
